@@ -17,7 +17,9 @@ public class Player : MonoBehaviour
     private float inputHorizontal = 0f;
 
     [SerializeField]
-    private float speed = 5f;
+    private float speed = 30f;
+    private const float fallMultiplier = 9.8f; // Set your desired fall multiplier
+
 
     [SerializeField]
     private float jumpForce = 6f;
@@ -73,16 +75,24 @@ public class Player : MonoBehaviour
     {
         string axisName = gameObject.name == "Player1" ? "Horizontal1" : "Horizontal2";
         inputHorizontal = Input.GetAxisRaw(axisName);
-        if (inputHorizontal != 0f)
+
+        float moveSpeed = inputHorizontal * speed;
+
+        // Check if the character is falling or double jumping
+        if (state == AnimationState.falling || state == AnimationState.doubleJumping)
         {
-            rb.AddForce(new Vector2(inputHorizontal * speed, 0f));
+            // Apply additional downward force to make the character fall faster
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - fallMultiplier * Time.deltaTime);
         }
+
+        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+
         if (inputHorizontal > 0f)
         {
             sprite.flipX = false;
             direction = 1;
         }
-        if (inputHorizontal < 0f)
+        else if (inputHorizontal < 0f)
         {
             sprite.flipX = true;
             direction = -1;
