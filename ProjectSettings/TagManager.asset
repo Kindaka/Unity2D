@@ -7,6 +7,7 @@ TagManager:
   - Player1
   - Player2
   - Bullet
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -42,11 +43,11 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 2488692909
+    uniqueID: 225308595
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Terrain
-    uniqueID: 3683281715
+    uniqueID: 717264687
     locked: 0
