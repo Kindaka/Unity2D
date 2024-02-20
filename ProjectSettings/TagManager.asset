@@ -8,6 +8,8 @@ TagManager:
   - Player2
   - Bullet
   - Ground
+  - Cherry
+  - Trap
   layers:
   - Default
   - TransparentFX
