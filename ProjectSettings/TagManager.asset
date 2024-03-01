@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Player1
-  - Player2
-  - Bullet
-  - Ground
-  - Cherry
-  - Trap
-  - hell
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -18,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - Player 1
-  - Player 2
-  - Bullet 1
-  - Bullet 2
-  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -45,12 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 225308595
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Terrain
-    uniqueID: 717264687
     locked: 0
