@@ -232,8 +232,11 @@ public class Player : MonoBehaviour
     public void Healing(float healing)
     {
 
-        currentHealth += healing;
-        healthBar.SetHealth(currentHealth);
+        if(currentHealth < maxHealth)
+        {
+            currentHealth += healing;
+            healthBar.SetHealth(currentHealth);
+        }
     }
     private void Die()
     {
