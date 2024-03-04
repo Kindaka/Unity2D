@@ -3547,7 +3547,7 @@ PrefabInstance:
       objectReference: {fileID: 8201764423919308054, guid: 3bbbae45d13ada94a97d3138e00b3d3a, type: 3}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: ground.m_Bits
-      value: 1024
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2828024210865032314, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: m_Size.x
@@ -4576,7 +4576,7 @@ PrefabInstance:
       objectReference: {fileID: 8201764423919308054, guid: 068777c990ee75f45b81c8d3a3ae0115, type: 3}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: ground.m_Bits
-      value: 1024
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2828024210865032314, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: m_Size.x

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemCollector : MonoBehaviour
+public class ItemCollectors : MonoBehaviour
 {
     private int cherries = 0;
     [SerializeField] private Text cherriesText;
