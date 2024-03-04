@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -44,8 +45,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private HealthBar healthBar;
     [SerializeField]
-    private float damage = 10f;
-
+    private float shootDamage = 10f;
+    [SerializeField]
+    private float trapDamage = 20f;
+    [SerializeField]
+    private float hell = 100f;
+    [SerializeField]
+    private float healing = 10f;
     [SerializeField]
     private GameObject explosionPrefab;
 
@@ -177,17 +183,56 @@ public class Player : MonoBehaviour
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             rb.AddForce(bullet.direction * bullet.speed / 2 * Vector2.right, ForceMode2D.Impulse);
 
-            TakeDamage();
-            if(currentHealth <= 0)
+            TakeDamage(shootDamage);
+            if(currentHealth<= 0)
             {
                 Die();
             }
         }
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            TakeDamage(trapDamage);
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
+        if (collision.gameObject.CompareTag("hell"))
+        {
+            Die();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Cherry"))
+        {
+
+            Healing(healing);
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
+        if (collision.gameObject.CompareTag("Banana"))
+        {
+            Healing(maxHealth);
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+
+        }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+    public void Healing(float healing)
+    {
+
+        currentHealth += healing;
         healthBar.SetHealth(currentHealth);
     }
     private void Die()

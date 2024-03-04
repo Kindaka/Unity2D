@@ -4,22 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Player1
-  - Player2
+  - Trap
+  - Cherry
   - Bullet
   - Ter
+  - hell
+  - Banana
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Player 1
-  - Player 2
-  - Bullet 1
-  - Bullet 2
-  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -42,12 +44,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 2488692909
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Terrain
-    uniqueID: 3683281715
     locked: 0
