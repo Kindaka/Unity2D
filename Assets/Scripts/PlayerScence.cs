@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerScence : MonoBehaviour
 {
+    public Transform playerCamera;
+
     private Rigidbody2D rb;
     private BoxCollider2D playersCollider;
     private SpriteRenderer sprite;
@@ -18,11 +21,11 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float speed = 30f;
-    private const float fallMultiplier = 9.8f; // Set your desired fall multiplier
+    private const float fallMultiplier = 8.5f; // Set your desired fall multiplier
 
 
     [SerializeField]
-    private float jumpForce = 6f;
+    private float jumpForce = 5.5f;
 
     [SerializeField]
     private GameObject bulletPrefab;
@@ -58,8 +61,8 @@ public class Player : MonoBehaviour
         sprite = gameObject.GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         playersCollider = GetComponent<BoxCollider2D>();
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //currentHealth = maxHealth;
+        //healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -69,6 +72,10 @@ public class Player : MonoBehaviour
         Jump();
         Shoot();
         UpdateAnimationState();
+        if (playerCamera.position.y - 8 > this.transform.position.y)
+        {
+            Die();
+        }
     }
 
     private void Move()
@@ -79,7 +86,7 @@ public class Player : MonoBehaviour
         float moveSpeed = inputHorizontal * speed;
 
         // Check if the character is falling or double jumping
-        if (state == AnimationState.falling || state == AnimationState.doubleJumping)
+        if (state == AnimationState.doubleJumping)
         {
             // Apply additional downward force to make the character fall faster
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - fallMultiplier * Time.deltaTime);
@@ -145,10 +152,10 @@ public class Player : MonoBehaviour
         {
             state = AnimationState.jumping;
         }
-        else if (rb.velocity.y < -.1f)
+        /*else if (rb.velocity.y < -.1f)
         {
             state = AnimationState.falling;
-        }
+        }*/
         if (jumpCount == 2)
         {
             state = AnimationState.doubleJumping;
@@ -160,7 +167,7 @@ public class Player : MonoBehaviour
     private bool IsJumpable()
     {
         bool isJumpable = false;
-        bool isGrounded = Physics2D.BoxCast(playersCollider.bounds.center, playersCollider.bounds.size, 0f, Vector2.down, .1f, ground);
+        bool isGrounded = Physics2D.BoxCast(playersCollider.bounds.center, playersCollider.bounds.size, 0f, Vector2.down, .2f, ground);
         if (isGrounded || canDoubleJump)
         {
             isJumpable = true;
@@ -169,34 +176,13 @@ public class Player : MonoBehaviour
         return isJumpable;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            // knock back, follow bullet's direction
-            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
-            rb.AddForce(bullet.direction * bullet.speed / 2 * Vector2.right, ForceMode2D.Impulse);
-
-            TakeDamage();
-            if(currentHealth <= 0)
-            {
-                Die();
-            }
-        }
-    }
-
-    public void TakeDamage()
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
     private void Die()
     {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            if (OnDestroyed != null)
-            {
-                OnDestroyed(gameObject);
-            }
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        if (OnDestroyed != null)
+        {
+            OnDestroyed(gameObject);
+        }
     }
 }
