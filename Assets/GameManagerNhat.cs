@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManagers : MonoBehaviour
+public class GameManagerNhat : MonoBehaviour
 {
     [SerializeField]
     private GamerOver goObj;
@@ -12,9 +11,9 @@ public class GameManagers : MonoBehaviour
     {
         foreach (Transform player in transform)
         {
-            if(player.gameObject != gameObject)
+            if (player.gameObject != gameObject)
             {
-                winner= player.name;
+                winner = player.name;
             }
         }
         goObj.Setup(winner);
