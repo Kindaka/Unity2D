@@ -199,11 +199,7 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("hell"))
         {
-            TakeDamage(hell);
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
+            Die();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -211,11 +207,20 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Cherry"))
         {
 
-            Healing();
+            Healing(healing);
             if (currentHealth <= 0)
             {
                 Die();
             }
+        }
+        if (collision.gameObject.CompareTag("Banana"))
+        {
+            Healing(maxHealth);
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+
         }
     }
 
@@ -224,7 +229,7 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
-    public void Healing()
+    public void Healing(float healing)
     {
 
         currentHealth += healing;
