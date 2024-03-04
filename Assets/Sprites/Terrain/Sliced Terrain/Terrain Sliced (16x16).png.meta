@@ -3578,6 +3578,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Terrain Sliced (16x16)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14458e9b5b01de46bdd28c17121e288
+      internalID: -1763875951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3733,6 +3754,7 @@ TextureImporter:
       Terrain (16x16)_97: 3666724916130892037
       Terrain (16x16)_98: 4557074923728586563
       Terrain (16x16)_99: -4531858634233595940
+      Terrain Sliced (16x16)_0: -540588848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
