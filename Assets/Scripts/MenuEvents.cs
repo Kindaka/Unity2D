@@ -14,6 +14,6 @@ public class MenuEvents : MonoBehaviour
 
    public void LoadMap(int index)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(index);
    }
 }
