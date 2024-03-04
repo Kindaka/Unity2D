@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManagers : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private GamerOver goObj;
+    private GameOver goObj;
     private string winner;
     void OnPlayerDeath(GameObject gameObject)
     {
