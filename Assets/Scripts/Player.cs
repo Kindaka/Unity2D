@@ -153,7 +153,7 @@ public class Player : MonoBehaviour
         {
             state = AnimationState.jumping;
         }
-        else if (rb.velocity.y < -.1f)
+        else if (rb.velocity.y < -.5f)
         {
             state = AnimationState.falling;
         }
