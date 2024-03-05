@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KhanhScene/KhanhScene.unity
     guid: 57d9bb0df16c0364fa5e54e80c462a96
+  - enabled: 1
+    path: Assets/Scenes/NhatScence/NhatSceneTerrian.unity
+    guid: 882edb5143fb1e74d85913dba0fad9ef
   m_configObjects: {}

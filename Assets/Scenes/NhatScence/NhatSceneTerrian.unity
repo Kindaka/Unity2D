@@ -5635,8 +5635,8 @@ Tilemap:
   - first: {x: 62, y: 12, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 72
-      m_TileSpriteIndex: 72
+      m_TileIndex: 15
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5645,8 +5645,8 @@ Tilemap:
   - first: {x: 63, y: 12, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 72
-      m_TileSpriteIndex: 72
+      m_TileIndex: 15
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6784,7 +6784,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 68
+  - m_RefCount: 70
     m_Data: {fileID: 11400000, guid: e3d8b2d9ce86de5439ae5ec5dc13c1eb, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 24b806d63973fec428369586eccaf3d1, type: 2}
@@ -6898,7 +6898,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 15a8f78ddbf53d04386f94d7e05ddcfb, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 286eb0d200fc27247b2d6f778d44bfea, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 8e26803759a03924e96f659df2c04d0a, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: bf4a82c9d7e00ac45a1e06387685504a, type: 2}
@@ -6941,7 +6941,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 68
+  - m_RefCount: 70
     m_Data: {fileID: -9178860142635623461, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -531863552409210314, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
@@ -7057,7 +7057,7 @@ Tilemap:
     m_Data: {fileID: -6933530849576539303, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 368488948622713827, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 3
     m_Data: {fileID: 146925484895311433, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 5344191953466923600, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
@@ -32453,8 +32453,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+      - m_Target: {fileID: 1966129074}
+        m_TargetAssemblyTypeName: GamerOver, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
