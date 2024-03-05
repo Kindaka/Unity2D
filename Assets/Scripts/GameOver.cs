@@ -19,4 +19,8 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Scene-Gun");
     }
+    public void Exit()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
