@@ -18,5 +18,8 @@ public class KienGameOver : MonoBehaviour
     {
         SceneManager.LoadScene("KienScene");
     }
-
+    public void Exit()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

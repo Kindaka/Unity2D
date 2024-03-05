@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: e2d0db6a1f1a170459e6eb9639055e81
+  - enabled: 1
     path: Assets/Scenes/Scene-Gun.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/KienScene/KienScene.unity
+    guid: 64be95e09e8506b459a2b25f1d9deac4
   m_configObjects: {}
