@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -75,6 +76,7 @@ public class Player : MonoBehaviour
         Jump();
         Shoot();
         UpdateAnimationState();
+        //CheckFallDamage();
     }
 
     private void Move()
@@ -215,7 +217,11 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Banana"))
         {
-            Healing(maxHealth);
+            if (currentHealth < maxHealth)
+            {
+                currentHealth = maxHealth;
+                healthBar.SetHealth(currentHealth);
+            }
             if (currentHealth <= 0)
             {
                 Die();
@@ -238,6 +244,18 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
     }
+    //private void CheckFallDamage()
+    //{
+    //    if (transform.position.y < -10f)
+    //    {
+    //        TakeDamage(30f); 
+    //        if (currentHealth <= 0)
+    //        {
+    //            Die(); 
+    //        }
+            
+    //    }
+    //}
     private void Die()
     {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
