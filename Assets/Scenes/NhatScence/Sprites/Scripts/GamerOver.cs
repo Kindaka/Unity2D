@@ -19,4 +19,8 @@ public class GamerOver : MonoBehaviour
     {
         SceneManager.LoadScene("NhatSceneTerrian");
     }
+    public void Exit()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
