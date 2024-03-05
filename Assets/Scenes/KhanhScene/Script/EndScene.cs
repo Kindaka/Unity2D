@@ -19,4 +19,8 @@ public class EndScene : MonoBehaviour
     {
         SceneManager.LoadScene("KhanhScene");
     }
+    public void Exit()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

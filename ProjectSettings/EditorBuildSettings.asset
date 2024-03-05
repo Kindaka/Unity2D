@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KienScene/KienScene.unity
     guid: 64be95e09e8506b459a2b25f1d9deac4
+  - enabled: 1
+    path: Assets/Scenes/KhanhScene/KhanhScene.unity
+    guid: 57d9bb0df16c0364fa5e54e80c462a96
   m_configObjects: {}
