@@ -72,7 +72,7 @@ public class PlayerScence : MonoBehaviour
         Jump();
         Shoot();
         UpdateAnimationState();
-        if (playerCamera.position.y - 8 > this.transform.position.y)
+        if (playerCamera.position.y - 9 > this.transform.position.y)
         {
             Die();
         }

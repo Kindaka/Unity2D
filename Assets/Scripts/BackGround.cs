@@ -16,8 +16,8 @@ public class BackGroundMove : MonoBehaviour
         obj = gameObject;
         oldPosition = obj.transform.position;
 
-        moveSpeed = 2;
-        moveRange = 8;
+        moveSpeed = 2f;
+        moveRange = 7f;
         
     }
 
