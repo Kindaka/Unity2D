@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NhatScence/NhatSceneTerrian.unity
     guid: 882edb5143fb1e74d85913dba0fad9ef
+  - enabled: 1
+    path: Assets/Scenes/Ducnt Scene/DucntScence.unity
+    guid: c43f83ba2102aee4e9c60306079801ee
   m_configObjects: {}
