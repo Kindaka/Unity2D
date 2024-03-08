@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class StickyPlatform : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Transform originalParent;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
         {
+            originalParent = collision.gameObject.transform.parent;
             collision.gameObject.transform.SetParent(transform);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player1")
+        if (collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
         {
-            collision.gameObject.transform.SetParent(null);
-        }
-        if (collision.gameObject.name == "Player2")
-        {
-            collision.gameObject.transform.SetParent(null);
+            collision.gameObject.transform.SetParent(originalParent);
         }
     }
-
 }

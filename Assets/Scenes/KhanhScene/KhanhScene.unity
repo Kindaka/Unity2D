@@ -2468,7 +2468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1705290003}
+      - m_Target: {fileID: 1705290006}
         m_TargetAssemblyTypeName: GamePauseScreen, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -3018,7 +3018,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1705290003}
+      - m_Target: {fileID: 1705290006}
         m_TargetAssemblyTypeName: GamePauseScreen, Assembly-CSharp
         m_MethodName: Home
         m_Mode: 1
@@ -3940,12 +3940,20 @@ PrefabInstance:
       value: 2.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 949862758}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
+      propertyPath: shootDelay
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: bulletPrefab
@@ -9012,6 +9020,134 @@ Transform:
   - {fileID: 628301399}
   - {fileID: 1151171721}
   - {fileID: 507850989}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1337615003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337615005}
+  - component: {fileID: 1337615004}
+  m_Layer: 0
+  m_Name: BGMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1337615004
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337615003}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 47f45ef7b5767674393cc401fc325705, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.112
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1337615005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337615003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.348015, y: -4.08736, z: -0.8251287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365229911
@@ -39147,7 +39283,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1705290003}
+      - m_Target: {fileID: 1705290006}
         m_TargetAssemblyTypeName: GamePauseScreen, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
@@ -59550,7 +59686,7 @@ GameObject:
   - component: {fileID: 1705290002}
   - component: {fileID: 1705290005}
   - component: {fileID: 1705290004}
-  - component: {fileID: 1705290003}
+  - component: {fileID: 1705290006}
   m_Layer: 5
   m_Name: GamePauseScreen
   m_TagString: Untagged
@@ -59581,19 +59717,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1705290003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705290001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f97d15281ddca42a773996b5084e43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1705290001}
 --- !u!114 &1705290004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59632,6 +59755,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705290001}
   m_CullTransparentMesh: 1
+--- !u!114 &1705290006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705290001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f97d15281ddca42a773996b5084e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1705290001}
 --- !u!1 &1760413808
 GameObject:
   m_ObjectHideFlags: 0
@@ -60615,9 +60751,17 @@ PrefabInstance:
       value: 2.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2008420908}
+    - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
+      propertyPath: shootDelay
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 2828024210865032313, guid: 17de2b69f5cf0dd4c933a4dc77dee522, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -60764,7 +60908,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1705290003}
+      - m_Target: {fileID: 1705290006}
         m_TargetAssemblyTypeName: GamePauseScreen, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -60958,3 +61102,4 @@ SceneRoots:
   - {fileID: 1798074368}
   - {fileID: 255062998}
   - {fileID: 559598948}
+  - {fileID: 1337615005}

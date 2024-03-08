@@ -21,7 +21,7 @@ public class PlayerScence : MonoBehaviour
 
     [SerializeField]
     private float speed = 30f;
-    private const float fallMultiplier = 8.5f; // Set your desired fall multiplier
+    private const float fallMultiplier = 10f; // Set your desired fall multiplier
 
 
     [SerializeField]
@@ -152,10 +152,10 @@ public class PlayerScence : MonoBehaviour
         {
             state = AnimationState.jumping;
         }
-        /*else if (rb.velocity.y < -.1f)
+        else if (rb.velocity.y < -.5f)
         {
             state = AnimationState.falling;
-        }*/
+        }
         if (jumpCount == 2)
         {
             state = AnimationState.doubleJumping;

@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float speed = 30f;
-    private const float fallMultiplier = 9.8f; // Set your desired fall multiplier
+    private const float fallMultiplier = 10f; // Set your desired fall multiplier
 
 
     [SerializeField]
